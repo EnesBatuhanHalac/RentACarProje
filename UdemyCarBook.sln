@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1822E784-895E-406E-B2E7-408FC50633BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyCarBook.Domain", "Core\UdemyCarBook.Domain\UdemyCarBook.Domain.csproj", "{9B739B0D-5B1B-461D-91BB-713E1BEC96FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B739B0D-5B1B-461D-91BB-713E1BEC96FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B739B0D-5B1B-461D-91BB-713E1BEC96FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B739B0D-5B1B-461D-91BB-713E1BEC96FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B739B0D-5B1B-461D-91BB-713E1BEC96FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B739B0D-5B1B-461D-91BB-713E1BEC96FE} = {1822E784-895E-406E-B2E7-408FC50633BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58479B0E-EAF7-41BA-A5EC-35B399AE393E}
+	EndGlobalSection
+EndGlobal
