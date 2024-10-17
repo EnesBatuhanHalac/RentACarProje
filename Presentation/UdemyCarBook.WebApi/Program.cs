@@ -8,6 +8,7 @@ using UdemyCarBook.Application.Features.CQRS.Handlers.CategoryHandler;
 using UdemyCarBook.Application.Features.CQRS.Handlers.ContactHandlers;
 using UdemyCarBook.Application.Interfaces;
 using UdemyCarBook.Application.Interfaces.CarInterfaces;
+using UdemyCarBook.Application.Services;
 using UdemyCarBook.Persistance.Context;
 using UdemyCarBook.Persistance.Repositories;
 using UdemyCarBook.Persistance.Repositories.CarRepositories;
@@ -57,7 +58,7 @@ namespace UdemyCarBook.WebApi
             builder.Services.AddScoped<RemoveContactCommandHandler>();
 
             // Add services to the container.
-
+            builder.Services.AddApplicationService(builder.Configuration);
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
