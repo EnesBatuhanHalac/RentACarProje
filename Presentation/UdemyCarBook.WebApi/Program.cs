@@ -43,6 +43,7 @@ namespace UdemyCarBook.WebApi
             builder.Services.AddScoped<GetCarQueryHandler>();
             builder.Services.AddScoped<GetCarByIdQueryHandler>();
             builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
+            builder.Services.AddScoped<GetLast5CarWithBrandQueryHandler>();
             builder.Services.AddScoped<CreateCarCommandHandler>();
             builder.Services.AddScoped<UpdateCarCommandHandler>();
             builder.Services.AddScoped<RemoveCarCommandHandler>();
