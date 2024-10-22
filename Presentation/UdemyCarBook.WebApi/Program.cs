@@ -7,10 +7,14 @@ using UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using UdemyCarBook.Application.Features.CQRS.Handlers.CategoryHandler;
 using UdemyCarBook.Application.Features.CQRS.Handlers.ContactHandlers;
 using UdemyCarBook.Application.Interfaces;
+using UdemyCarBook.Application.Interfaces.BlogInderfaces;
 using UdemyCarBook.Application.Interfaces.CarInterfaces;
+using UdemyCarBook.Application.Interfaces.CarPricingInterfaces;
 using UdemyCarBook.Application.Services;
 using UdemyCarBook.Persistance.Context;
 using UdemyCarBook.Persistance.Repositories;
+using UdemyCarBook.Persistance.Repositories.BlogRepositories;
+using UdemyCarBook.Persistance.Repositories.CarPricingRepositories;
 using UdemyCarBook.Persistance.Repositories.CarRepositories;
 
 namespace UdemyCarBook.WebApi
@@ -24,7 +28,9 @@ namespace UdemyCarBook.WebApi
             builder.Services.AddScoped<CarBookContext>();
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddScoped<ICarRepository, CarRepository>();
-            
+            builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+            builder.Services.AddScoped<ICarPricingRepository, CarPricingRepository>();
+
             builder.Services.AddScoped<GetAboutQueryHandler>();
             builder.Services.AddScoped<GetAboutByIdQueryHandler>();
             builder.Services.AddScoped<CreateAboutCommandHandler>();
@@ -57,6 +63,7 @@ namespace UdemyCarBook.WebApi
             builder.Services.AddScoped<CreateContactCommandHandler>();
             builder.Services.AddScoped<UpdateContactCommandHandler>();
             builder.Services.AddScoped<RemoveContactCommandHandler>();
+
 
             // Add services to the container.
             builder.Services.AddApplicationService(builder.Configuration);
