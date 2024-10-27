@@ -10,5 +10,7 @@ namespace UdemyCarBook.Application.Interfaces.BlogInderfaces
     public interface IBlogRepository
     {
         Task<List<Blog>> GetLast3BlogWithAuthors();
+        Task<List<Blog>> GetAllBlogWithAuthorAsync();
+        Task<Blog> GetAuthorByBlogIdAsync(int id);
     }
 }
