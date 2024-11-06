@@ -38,7 +38,7 @@ namespace UdemyCarBook.WebApi.Controllers
             return Ok("Feature Oluşturuldu");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveFeature(int id)
         {
             await _mediator.Send(new RemoveFeatureCommand(id));
